@@ -28,6 +28,8 @@
 #include <linux/module.h>
 #include <linux/proc_fs.h>
 
+#include <sec_boot_lib.h>
+#include <linux/uaccess.h>
 #include<linux/soc/qcom/smem.h>
 
 #include <linux/slab.h>
