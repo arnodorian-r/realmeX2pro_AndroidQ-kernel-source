@@ -60,6 +60,7 @@
 #include "../include/oppo_fp_common.h"
 extern char *saved_command_line;
 
+#include <linux/uaccess.h>
 #include <linux/soc/qcom/smem.h>
 
 #define FP_GPIO_NODE           "oppo,fp_gpio"
