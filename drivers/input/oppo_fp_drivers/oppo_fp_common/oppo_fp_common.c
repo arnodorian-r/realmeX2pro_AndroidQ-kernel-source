@@ -175,7 +175,6 @@ static struct file_operations fp_id_node_ctrl = {
     .write = fp_id_node_write,
 };
 
-#if CONFIG_OPPO_FINGERPRINT_PROJCT != 19696
 int opticalfp_irq_handler(struct fp_underscreen_info* tp_info)
 {
     fp_vendor_t fpsensor_type = get_fpsensor_type();
@@ -188,7 +187,6 @@ int opticalfp_irq_handler(struct fp_underscreen_info* tp_info)
         return FP_UNKNOWN;
     }
 }
-#endif
 
 static int fp_gpio_parse_child_dts(struct fp_data *fp_data)
 {
@@ -458,9 +456,7 @@ static void __exit oppo_fp_common_exit(void)
     platform_driver_unregister(&oppo_fp_common_driver);
 }
 
-#if CONFIG_OPPO_FINGERPRINT_PROJCT != 19696
 EXPORT_SYMBOL(opticalfp_irq_handler);
-#endif
 
 subsys_initcall(oppo_fp_common_init);
 module_exit(oppo_fp_common_exit)
