@@ -26,15 +26,9 @@
 #dts-dirs += lg
 #dts-dirs += zte
 #else
-ifeq ($(TARGET_BUILD_VERSION),)
-dts-dirs += 18115
-dts-dirs += 19081
-else
-dts-dirs += 18501
-dts-dirs += 18503
-endif
+
 dts-dirs += 19781
-dts-dirs += 19696
+
 #endif//VENDOR_EDIT
 subdir-y	:= $(dts-dirs)
 
